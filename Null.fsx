@@ -3,8 +3,7 @@
 open Microsoft.FSharp.Linq
 open System
 
-let a = Nullable(0)
-a ?+ 1 ?+? Nullable()
+Nullable(0) ?+ 1 ?+? Nullable()
 |> printfn "%A"  // null
 
 type NullableBuilder() =
@@ -24,4 +23,10 @@ nullable {
     return a + b + c
     //return a
 }
+|> printfn "%A"
+
+
+let (>>=) m f = 
+    f m
+1 >>= (+) 2 >>= (+) 3 >>= (+) 4
 |> printfn "%A"
