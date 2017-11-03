@@ -1,10 +1,14 @@
+// https://stackoverflow.com/questions/5008910/understanding-f-type-constructors
 
 type Foo = 
-    val mutable x : int
+    val mutable x: int
+    val mutable y: int
 
-    new (i: int) as this = 
-        { x = i }
-        then this.x <- 0
+    new (x: int, y: int) as this = 
+        { x = x; y = y }
+        then 
+            this.x <- 0
+            this.y <- 0
 
-let foo = Foo(100)
-foo.x |> printfn "%A"
+let foo = Foo(100, 200)
+printfn "%A %A" foo.x foo.y
