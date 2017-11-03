@@ -1,5 +1,5 @@
 {
   "script": {
-    "enableScriptNuGetReferences": true
+    "enableScriptNuGetReferences": true,
   }
 }
