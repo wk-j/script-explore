@@ -24,8 +24,19 @@ nullable {
 
 |> printfn "%A"
 
+let bind (m, f) = 
+    let hasValue (a:Nullable<'a>) = a.HasValue 
+    match hasValue m with 
+    | false -> System.Nullable() 
+    | true -> f(m.Value)
 
-let (>>=) m f = 
-    f m
-1 >>= (+) 2 >>= (+) 3 >>= (+) 4
+bind(Nullable(3), fun r1 ->
+    bind(Nullable(4), fun r2 ->
+        bind(Nullable(5), fun r3 ->
+            Nullable(r1 + r2 + r3)
+        )
+    )
+)
 |> printfn "%A"
+
+
