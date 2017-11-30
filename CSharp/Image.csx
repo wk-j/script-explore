@@ -10,6 +10,6 @@ using SixLabors.Primitives;
 
 using (var image = Image.Load("Images/BigPhoto.jpg"))
 {
-    image.Mutate(ctx => ctx.Resize(image.Width / 2, image.Height / 2));
+    image.Mutate(ctx => ctx.Resize(image.Width / 3, image.Height / 3));
     image.Save("Images/SmallPhoto.jpg");
 }
