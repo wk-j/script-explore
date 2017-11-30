@@ -1,4 +1,4 @@
-#! "dotnetcoreapp2.0"
+#! "netcoreapp2.0"
 #r "nuget:NetStandard.Library,2.0"
 #r "nuget:SixLabors.ImageSharp,1.0.0-beta0001"
 #r "nuget:SixLabors.ImageSharp.Drawing,1.0.0-beta0001"

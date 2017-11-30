@@ -1,4 +1,4 @@
-#! "dotnetcoreapp2.0"
+#! "netcoreapp2.0"
 #r "nuget:NetStandard.Library,2.0"
 #r "nuget:Newtonsoft.Json"
 
