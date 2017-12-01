@@ -6,7 +6,8 @@ using Newtonsoft.Json;
 using System.Linq;
 using System;
 
-void testJson() {
+void testJson()
+{
     var rawJson = @"[1,2,3,4]";
     var data = JsonConvert.DeserializeObject<int[]>(rawJson);
     Console.WriteLine(string.Join(",", data));

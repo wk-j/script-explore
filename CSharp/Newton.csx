@@ -1,6 +1,6 @@
 #! "netcoreapp2.0"
 #r "nuget:NetStandard.Library,2.0"
-#r "nuget:Newtonsoft.Json"
+#r "nuget:Newtonsoft.Json,10.0.3"
 
 using Newtonsoft.Json;
 using System.Collections.Generic;
